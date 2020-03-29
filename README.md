@@ -41,7 +41,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Security
 
-If you discover any security related issues, ~please email freek@spatie.be instead of using the issue tracker~ you are on your own.
+If you discover any security related issues, ~please email freek@spatie.be~ you are on your own.
 
 ## Credits
 
