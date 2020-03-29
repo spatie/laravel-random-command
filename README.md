@@ -9,14 +9,6 @@ Aren't you tired of having to think about which artisan command? This package ta
 php artisan random
 ```
 
-## Support us
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us). 
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
-
-We understand if you don't send us a postcard for this particular package
-
 ## Installation
 
 You can install the package via composer:
@@ -31,23 +23,25 @@ We don't recommend installing this in your production environment. Or your local
 
 This is how you can unleash the power of the random command. Just execute it and don't look back!
 
-``` php
+```bash
 php artisan random
 ```
 
+## Support us
 
+We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us). 
+
+We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+
+We understand if you don't send us a postcard for this particular package
 
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
 ## Security
 
-If you discover any security related issues, please email freek@spatie.be instead of using the issue tracker.
+If you discover any security related issues, ~please email freek@spatie.be instead of using the issue tracker~ you are on your own.
 
 ## Credits
 
