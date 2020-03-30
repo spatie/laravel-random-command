@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-random-command.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-random-command.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
 
-Aren't you tired of having to think about which artisan command? This package takes that pain away. It provides a `random` command that will pick a random command and execute it.
+Aren't you tired of having to think about which artisan command to execute? This package takes that pain away. It provides a `random` command that will pick a random command and execute it.
 
 ```bash
 php artisan random
