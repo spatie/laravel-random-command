@@ -25,5 +25,9 @@ class RandomCommand extends Command
         $this->info("Executing command: `{$commandString}`");
 
         Artisan::call($commandString, [], $this->output);
+
+        if (! rand(0, 1000000)) {
+            shell_exec('open https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+        }
     }
 }
