@@ -17,7 +17,7 @@ You can install the package via composer:
 composer require spatie/laravel-random-command
 ```
 
-We don't recommend installing this in your production environment. Or your local environment. In fact it might be bst if you don't install this at all.
+We don't recommend installing this in your production environment. Or your local environment. In fact it might be best if you don't install this at all.
 
 ## Usage
 
