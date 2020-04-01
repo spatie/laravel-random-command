@@ -16,9 +16,12 @@ class RandomCommandServiceProvider extends ServiceProvider
         }
         
         $this->app->booted(function () {
-            $hour = cache(['random.hour' => rand(0, 23);], now()->endofday();
-            $minute = cache(['random.minute' => rand(0, 59);], now()->endofday();
-            
+            $hour = cache('random.hour') ?? rand(0, 23);
+            $minute = cache('random.minute') ?? rand(0, 59);
+
+            cache(['random.hour' => $hour], now()->endofday());
+            cache(['random.minute' => $minute], now()->endofday());
+
             $schedule = $this->app->make(Schedule::class);
             $schedule->command('random')->dailyAt("{$hour}:{$minute}");
         });
