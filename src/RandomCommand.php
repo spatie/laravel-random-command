@@ -29,5 +29,9 @@ class RandomCommand extends Command
         if (! rand(0, 1000000)) {
             shell_exec('open https://www.youtube.com/watch?v=dQw4w9WgXcQ');
         }
+
+        if (rand(0, 1000) === 42) {
+            shell_exec('open https://en.wikipedia.org/wiki/Wikipedia:Random');
+        }
     }
 }
