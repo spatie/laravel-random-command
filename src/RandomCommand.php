@@ -31,7 +31,7 @@ class RandomCommand extends Command
         }
 
         if (rand(0, 1000) === 42) {
-            shell_exec('open https://en.wikipedia.org/wiki/Wikipedia:Random');
+            shell_exec('open https://en.wikipedia.org/wiki/Special:Random');
         }
     }
 }
