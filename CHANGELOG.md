@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-random-command` will be documented in this file
 
+## 1.3.0 - 2020-04-01
+
+- one in a thousand chance to learn something new, when ? 42 ! (#6)
+
 ## 1.2.0 - 2020-04-01
 
 - one in a million chance of having a good time (#4)
