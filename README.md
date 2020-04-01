@@ -27,6 +27,8 @@ This is how you can unleash the power of the random command. Just execute it and
 php artisan random
 ```
 
+One more thing. The package will also adds this command to your scheduler and it will run at random times. Enjoy!
+
 ## Security
 
 If you discover any security related issues, ~please email freek@spatie.be~ you are on your own.
