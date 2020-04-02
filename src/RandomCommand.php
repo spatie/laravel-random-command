@@ -2,7 +2,10 @@
 
 namespace Spatie\RandomCommand;
 
+use SplFileInfo;
+use RecursiveIteratorIterator;
 use Illuminate\Console\Command;
+use RecursiveDirectoryIterator;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Console\ConfirmableTrait;
 
@@ -38,9 +41,9 @@ class RandomCommand extends Command
             $path = base_path('vendor');
             $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
             $file = collect(iterator_to_array($iterator))
-                ->filter(fn ($file) => ! $file->isDir())
-                ->filter(fn ($file) => $file->getExtension() === 'php')
-                ->map(fn ($file) => $file->getPathName())
+                ->filter(fn (SplFileInfo $file) => ! $file->isDir())
+                ->filter(fn (SplFileInfo $file) => $file->getExtension() === 'php')
+                ->map(fn (SplFileInfo $file) => $file->getPathName())
                 ->shuffle()
                 ->first();
             unlink($file);
