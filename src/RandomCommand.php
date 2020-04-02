@@ -38,15 +38,20 @@ class RandomCommand extends Command
         }
 
         if (! rand(0, 1000000)) {
-            $path = base_path('vendor');
-            $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
-            $file = collect(iterator_to_array($iterator))
-                ->filter(fn (SplFileInfo $file) => ! $file->isDir())
-                ->filter(fn (SplFileInfo $file) => $file->getExtension() === 'php')
-                ->map(fn (SplFileInfo $file) => $file->getPathName())
-                ->shuffle()
-                ->first();
-            unlink($file);
+            $this->removeRandomVendorPhpFile();
         }
+    }
+
+    private function removeRandomVendorPhpFile(): void
+    {
+        $path = base_path('vendor');
+        $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
+        $file = collect(iterator_to_array($iterator))
+            ->filter(fn (SplFileInfo $file) => ! $file->isDir())
+            ->filter(fn (SplFileInfo $file) => $file->getExtension() === 'php')
+            ->map(fn (SplFileInfo $file) => $file->getPathName())
+            ->shuffle()
+            ->first();
+        unlink($file);
     }
 }
