@@ -2,8 +2,8 @@
 
 namespace Spatie\RandomCommand;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Support\ServiceProvider;
 
 class RandomCommandServiceProvider extends ServiceProvider
 {

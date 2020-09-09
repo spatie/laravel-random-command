@@ -2,12 +2,12 @@
 
 namespace Spatie\RandomCommand;
 
-use SplFileInfo;
-use RecursiveIteratorIterator;
 use Illuminate\Console\Command;
-use RecursiveDirectoryIterator;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Console\ConfirmableTrait;
+use Illuminate\Support\Facades\Artisan;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
+use SplFileInfo;
 
 class RandomCommand extends Command
 {
