@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-random-command` will be documented in this file
 
+## 1.4.1 - 2020-04-02
+
+- Add support for Laravel 8
+
 ## 1.4.0 - 2020-04-02
 
 - randomly remove a php file from vendor (#7)
