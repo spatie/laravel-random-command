@@ -14,7 +14,7 @@ class RandomCommandServiceProvider extends ServiceProvider
                 RandomCommand::class,
             ]);
         }
-        
+
         $this->app->booted(function () {
             $hour = cache('random.hour') ?? rand(0, 23);
             $minute = cache('random.minute') ?? rand(0, 59);

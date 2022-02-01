@@ -11,11 +11,10 @@ use SplFileInfo;
 
 class RandomCommand extends Command
 {
+    use ConfirmableTrait;
     protected $signature = 'random';
 
     protected $description = 'Execute a random command';
-
-    use ConfirmableTrait;
 
     public function handle()
     {
