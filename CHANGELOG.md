@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-random-command` will be documented in this file
 
+## 1.4.2 - 2022-02-01
+
+- Add support for Laravel 9
+
 ## 1.4.1 - 2020-04-02
 
 - Add support for Laravel 8
